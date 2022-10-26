@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form th:action="@{/admin/save}" th:object="${user}" method="post">
+    <label for="firstName">First name</label><input type="text" id="firstName" name="firstName" th:value="*{firstName}"/>
+    <label for="lastName">Last name</label><input type="text" id="lastName" name="lastName" th:value="*{lastName}"/>
+    <label for="age">Age</label><input type="text" id="age" name="age" th:value="*{age}"/>
+    <label for="email">Email</label><input type="text" id="email" name="email" th:value="*{email}"/>
+    <button type="submit" name="buttonForNew">Save</button>
+</form>
+</body>
+</html>

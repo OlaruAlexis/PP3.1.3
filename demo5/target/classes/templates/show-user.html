@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Age</th>
+    <th>Email</th>
+  </tr>
+  <tr th:each="user : ${user}">
+    <td th:text="${user.firstName}"></td>
+    <td th:text="${user.lastName}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${user.email}"></td>
+    </table>
+<br>
+<br>
+<a href="/logout">Logout</a>
+</body>
+</html>
